@@ -8,6 +8,7 @@ namespace ConsoleApp5
         {
             byte fav = 255;
             Console.WriteLine("my fav num is: " + fav);
+
             Console.ReadLine();
         }
     }

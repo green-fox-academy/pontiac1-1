@@ -1,0 +1,11 @@
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\bin\Debug\netcoreapp2.0\ConsoleApp35.deps.json
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\bin\Debug\netcoreapp2.0\ConsoleApp35.runtimeconfig.json
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\bin\Debug\netcoreapp2.0\ConsoleApp35.runtimeconfig.dev.json
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\bin\Debug\netcoreapp2.0\ConsoleApp35.dll
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\bin\Debug\netcoreapp2.0\ConsoleApp35.pdb
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.csprojResolveAssemblyReference.cache
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.csproj.CoreCompileInputs.cache
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.AssemblyInfoInputs.cache
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.AssemblyInfo.cs
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.dll
+c:\users\test\source\repos\ConsoleApp35\ConsoleApp35\obj\Debug\netcoreapp2.0\ConsoleApp35.pdb
