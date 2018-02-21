@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApp55
 {
-    class Program
+    class PlantesinOrder
     {
         static void Main(string[] args)
         {
