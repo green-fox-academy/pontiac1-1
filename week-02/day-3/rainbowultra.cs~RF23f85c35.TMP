@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System;
+using System.Windows.Controls;
+using GreenFox;
+
+namespace Drawing
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            int[] randomx = new int[700];
+            int[] randomy = new int[700];
+            for (int i = 0; i < 700; i++)
+            {
+                randomx[i] = i;
+                randomy[i] = i;
+            }
+
+            InitializeComponent();
+            var back = new FoxDraw(canvas);
+            back.FillColor(Colors.Black);
+            back.DrawRectangle(0, 0, Width, Height);
+
+            for (int i = 1; i < 700; i++)
+            {
+                InitializeComponent();
+                Random stary = new Random();
+                Random starx = new Random();
+
+
+                var star = new FoxDraw(canvas);
+
+                star.FillColor(Colors.White);
+                star.DrawEllipse(starx.Next(1, i), stary.Next(1, i), 2, 2 );
+
+            }
+
+        }
+
+    }
+}
