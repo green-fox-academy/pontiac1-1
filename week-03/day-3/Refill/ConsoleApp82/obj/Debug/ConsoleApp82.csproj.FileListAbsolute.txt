@@ -1,0 +1,7 @@
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\bin\Debug\ConsoleApp82.exe.config
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\bin\Debug\ConsoleApp82.exe
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\bin\Debug\ConsoleApp82.pdb
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\obj\Debug\ConsoleApp82.csprojResolveAssemblyReference.cache
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\obj\Debug\ConsoleApp82.csproj.CoreCompileInputs.cache
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\obj\Debug\ConsoleApp82.exe
+c:\users\test\source\repos\ConsoleApp82\ConsoleApp82\obj\Debug\ConsoleApp82.pdb
