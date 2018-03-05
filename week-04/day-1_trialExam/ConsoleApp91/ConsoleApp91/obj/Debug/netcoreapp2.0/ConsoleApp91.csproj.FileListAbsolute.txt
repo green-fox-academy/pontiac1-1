@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\bin\Debug\netcoreapp2.0\ConsoleApp91.deps.json
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\bin\Debug\netcoreapp2.0\ConsoleApp91.runtimeconfig.json
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\bin\Debug\netcoreapp2.0\ConsoleApp91.runtimeconfig.dev.json
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\bin\Debug\netcoreapp2.0\ConsoleApp91.dll
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\bin\Debug\netcoreapp2.0\ConsoleApp91.pdb
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.csprojResolveAssemblyReference.cache
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.AssemblyInfoInputs.cache
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.AssemblyInfo.cs
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.dll
+C:\Users\Test\source\repos\ConsoleApp91\ConsoleApp91\obj\Debug\netcoreapp2.0\ConsoleApp91.pdb
