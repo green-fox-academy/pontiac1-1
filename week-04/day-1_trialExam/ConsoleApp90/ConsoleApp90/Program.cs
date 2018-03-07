@@ -7,16 +7,16 @@ namespace ConsoleApp90
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Users\Test\Documents\trialexamweek04\exam-trial-basics\countas\text.txt";
-            CountAs(path);
+            string file = "Text.txt";
+            CountAs(file);
             Console.Read();
         }
-        static void CountAs(string path)
+        static void CountAs(string file)
         {
                 int freqA = 0;
             try
             {
-                string content = File.ReadAllText(path);
+                string content = File.ReadAllText(file);
                 for (int i = 0; i < content.Length; i++)
                 {
                     if (content[i] == 'a')
