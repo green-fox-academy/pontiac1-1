@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\Sum\CountLetters\bin\Debug\netcoreapp2.0\CountLetters.deps.json
+C:\Users\Test\source\repos\Sum\CountLetters\bin\Debug\netcoreapp2.0\CountLetters.runtimeconfig.json
+C:\Users\Test\source\repos\Sum\CountLetters\bin\Debug\netcoreapp2.0\CountLetters.runtimeconfig.dev.json
+C:\Users\Test\source\repos\Sum\CountLetters\bin\Debug\netcoreapp2.0\CountLetters.dll
+C:\Users\Test\source\repos\Sum\CountLetters\bin\Debug\netcoreapp2.0\CountLetters.pdb
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.csprojResolveAssemblyReference.cache
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.AssemblyInfoInputs.cache
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.AssemblyInfo.cs
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.dll
+C:\Users\Test\source\repos\Sum\CountLetters\obj\Debug\netcoreapp2.0\CountLetters.pdb

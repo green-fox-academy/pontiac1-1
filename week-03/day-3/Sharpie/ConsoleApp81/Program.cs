@@ -12,10 +12,9 @@ namespace ConsoleApp81
         {
             var toll = new Sharpie("Blue", 0.1, 100);
             string mystring = "o legyen ar vege bazdmeg!";
-            for (int i = 0;  i < mystring.Length;  i++)
-            {
-                toll.use();
-            }
+
+                toll.use(mystring);
+            
             Console.WriteLine(toll.InkAmt);
             Console.Read();
         }

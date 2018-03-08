@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\Sum\Sum\bin\Debug\netcoreapp2.0\Sum.deps.json
+C:\Users\Test\source\repos\Sum\Sum\bin\Debug\netcoreapp2.0\Sum.runtimeconfig.json
+C:\Users\Test\source\repos\Sum\Sum\bin\Debug\netcoreapp2.0\Sum.runtimeconfig.dev.json
+C:\Users\Test\source\repos\Sum\Sum\bin\Debug\netcoreapp2.0\Sum.dll
+C:\Users\Test\source\repos\Sum\Sum\bin\Debug\netcoreapp2.0\Sum.pdb
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.AssemblyInfoInputs.cache
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.AssemblyInfo.cs
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.dll
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.pdb
+C:\Users\Test\source\repos\Sum\Sum\obj\Debug\netcoreapp2.0\Sum.csprojResolveAssemblyReference.cache

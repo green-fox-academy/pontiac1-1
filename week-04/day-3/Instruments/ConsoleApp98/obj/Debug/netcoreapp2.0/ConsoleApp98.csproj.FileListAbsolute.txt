@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.csprojResolveAssemblyReference.cache
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.AssemblyInfoInputs.cache
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.AssemblyInfo.cs
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\bin\Debug\netcoreapp2.0\ConsoleApp98.deps.json
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\bin\Debug\netcoreapp2.0\ConsoleApp98.runtimeconfig.json
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\bin\Debug\netcoreapp2.0\ConsoleApp98.runtimeconfig.dev.json
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\bin\Debug\netcoreapp2.0\ConsoleApp98.dll
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\bin\Debug\netcoreapp2.0\ConsoleApp98.pdb
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.dll
+C:\Users\Test\source\repos\ConsoleApp98\ConsoleApp98\obj\Debug\netcoreapp2.0\ConsoleApp98.pdb

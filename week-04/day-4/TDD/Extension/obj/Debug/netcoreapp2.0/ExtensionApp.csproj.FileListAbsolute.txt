@@ -1,0 +1,11 @@
+C:\Users\Test\source\repos\Sum\Extension\bin\Debug\netcoreapp2.0\ExtensionApp.deps.json
+C:\Users\Test\source\repos\Sum\Extension\bin\Debug\netcoreapp2.0\ExtensionApp.runtimeconfig.json
+C:\Users\Test\source\repos\Sum\Extension\bin\Debug\netcoreapp2.0\ExtensionApp.runtimeconfig.dev.json
+C:\Users\Test\source\repos\Sum\Extension\bin\Debug\netcoreapp2.0\ExtensionApp.dll
+C:\Users\Test\source\repos\Sum\Extension\bin\Debug\netcoreapp2.0\ExtensionApp.pdb
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.csprojResolveAssemblyReference.cache
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.csproj.CoreCompileInputs.cache
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.AssemblyInfoInputs.cache
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.AssemblyInfo.cs
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.dll
+C:\Users\Test\source\repos\Sum\Extension\obj\Debug\netcoreapp2.0\ExtensionApp.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp81
 {
-    class Sharpie
+    public class Sharpie
     {
         public string Color;
         public double Width;
@@ -14,6 +14,9 @@ namespace ConsoleApp81
 
         public Sharpie()
         {
+            InkAmt = 100;
+            Width = 0.5;
+            Color = "inidgo";
         }
 
         public Sharpie(string Color, double Width, double InkAmt)
@@ -22,9 +25,12 @@ namespace ConsoleApp81
             this.Width = Width;
             this.InkAmt = InkAmt;
         }
-        public void use()
+        public void use(string testWord)
         {
-            InkAmt--;
+            for (int i = 0; i < testWord.Length; i++)
+            {
+                InkAmt--;
+            }
         }
     }
 }
