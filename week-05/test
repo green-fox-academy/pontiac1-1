@@ -1,0 +1,28 @@
+using System;
+
+namespace test
+{
+   protected class Human()
+   {
+	protected string name;
+	protected int level;
+	protected int exp;
+	protected int velociy;
+	
+	protected void Walk()
+	{
+	    
+	}
+
+	protected void Attack(Weapon weapon)
+	{
+	    
+	}
+
+	protected void Defend()
+	{
+
+	}
+    }
+}
+	
