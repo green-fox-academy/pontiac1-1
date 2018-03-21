@@ -10,9 +10,12 @@ namespace WpfApp2
 {
     static class Controls
     {
-        static int position = 0;
+        static int position;
+       
         public static void W(System.Windows.Controls.Primitives.UniformGrid map)
         {
+
+
             string path = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
             string wallOrFloor = File.ReadAllText(path);
             var walls = new List<int>();
@@ -30,17 +33,19 @@ namespace WpfApp2
                 if (!walls.Contains(index -= 10))
                 {
                     position -= 10;
-                    Hero.DrawHero(map, "heroback", position);
+                    Draw.DrawHero(map, "heroback", position);
                 }
                 else
                 {
                     Hero.DrawHero(map, "heroback", position);
+                    
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 position += 10;
                 Hero.DrawHero(map, "heroback", position);
+                
             }
         }
 
@@ -94,17 +99,17 @@ namespace WpfApp2
                 if (!walls.Contains(index += 10))
                 {
                     position += 10;
-                    Hero.DrawHero(map, "herofront", position);
+                    Draw.DrawHero(map, "herofront", position);
                 }
                 else
                 {
-                    Hero.DrawHero(map, "herofront", position);
+                    Draw.DrawHero(map, "herofront", position);
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 position -= 10;
-                Hero.DrawHero(map, "herofront", position);
+                Draw.DrawHero(map, "herofront", position);
             }
         }
 
@@ -113,7 +118,7 @@ namespace WpfApp2
             string path = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
             string wallOrFloor = File.ReadAllText(path);
             var walls = new List<int>();
-            int index = position;
+            int index = Controls.position;
             for (int i = 0; i < wallOrFloor.Length; i++)
             {
                 if (wallOrFloor[i] == '1')
@@ -122,11 +127,11 @@ namespace WpfApp2
                 }
             }
 
-            if (position % 10 != 9)
+            if (Controls.position % 10 != 9)
             {
                 if (!walls.Contains(++index))
                 {
-                    Hero.DrawHero(map, "heroright", ++position);
+                    Hero.DrawHero(map, "heroright", ++Controls.position);
                 }
                 else
                 {

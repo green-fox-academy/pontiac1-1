@@ -13,8 +13,7 @@ namespace WpfApp2
 {
     static class Draw
     {
-        public static int position = 0;
-
+        static int position;
         public static void DrawMap(System.Windows.Controls.Primitives.UniformGrid map)
         {
             string levelPath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
@@ -56,6 +55,7 @@ namespace WpfApp2
                 Cells[i] = i;
             }
 
+            
             var charactertile = new Rectangle();
             var hero = new Image();
             string uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\" + pose + ".png";
@@ -66,35 +66,7 @@ namespace WpfApp2
             charactertile.Fill = characterbrush;
             map.Children.RemoveAt(Cells[position]);
             map.Children.Insert(Cells[position], charactertile);
-        }
-
-        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, int position)
-        {
-            string path = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
-            string wallOrFloor = File.ReadAllText(path);
-            var floors = new List<int>();
-
-            for (int i = 0; i < wallOrFloor.Length; i++)
-            {
-                if (wallOrFloor[i] == '0')
-                {
-                    floors.Add(i);
-                }
-            }
-
-            var rnd = new Random();
-            var rndPosition = rnd.Next(floors[0], floors.Last());
-
-            var monstertile = new Rectangle();
-            var monster = new Image();
-            string uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\skeleton.png";
-            monster.Source = new BitmapImage(new Uri(uripath));
-
-;
-            var monsterbrush = new ImageBrush(monster.Source);
-            monstertile.Fill = monsterbrush;
-            map.Children.RemoveAt(rndPosition);
-            map.Children.Insert(rndPosition, monstertile);
+            
         }
     }
 }

@@ -42,7 +42,7 @@ namespace WpfApp2
                     var wallbrush = new ImageBrush(wall.Source);
                     walltile.Fill = wallbrush;
                     walls.Add(i);
-                }
+                }             
             }
         }
     }
