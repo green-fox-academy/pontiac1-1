@@ -46,6 +46,7 @@ namespace WpfApp2
 
             Draw.DrawMap(Map);
             Draw.DrawHero(Map, "herofront");
+            Draw.DrawMonster(Map, 22);
         }
 
         private void WindowKeyDown(object sender, KeyEventArgs e)
@@ -53,21 +54,25 @@ namespace WpfApp2
             if (e.Key == Key.W)
             {
                 Controls.W(Map);
+                Draw.DrawMonster(Map, 22);
             }
 
             if (e.Key == Key.A)
             {
                 Controls.A(Map);
+                Draw.DrawMonster(Map, 22);
             }
 
             if (e.Key == Key.S)
             {
                 Controls.S(Map);
+                Draw.DrawMonster(Map, 22);
             }
 
             if (e.Key == Key.D)
             {
                 Controls.D(Map);
+                Draw.DrawMonster(Map, 22);
             }
         }
     }

@@ -7,14 +7,17 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace WpfApp2
 {
-    static class Monster
+    public class Monster
     {
-        static public void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, int position)
+        public int position;
+        public Monster(int position)
         {
-            
+
+            this.position = position;
         }
     }
 }

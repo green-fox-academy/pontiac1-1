@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30724054-DD3D-4B4F-9AF4-2FA9B293F9AE}</ProjectGuid>
+    <ProjectGuid>{E4919D7C-9C18-421B-862A-F40F2B65EAF8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfApp2</RootNamespace>
-    <AssemblyName>WpfApp2</AssemblyName>
+    <RootNamespace>Wanderer_V2._0</RootNamespace>
+    <AssemblyName>Wanderer_V2.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -58,25 +58,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AddHero.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls.cs" />
-    <Compile Include="Draw.cs" />
-    <Compile Include="FoxDraw.cs" />
-    <Compile Include="Hero.cs" />
-    <Compile Include="HUD.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Map.cs" />
-    <Compile Include="Monster.cs" />
-    <Compile Include="Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,34 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\floor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\hero-down.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\wall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\level1.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\herofront.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\heroleft.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\heroback.png" />
-    <Resource Include="Assets\heroright.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\skeleton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\monster.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

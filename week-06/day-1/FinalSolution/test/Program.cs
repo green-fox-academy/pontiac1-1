@@ -23,23 +23,18 @@ namespace test
             //}
 
 
+            int a = 33;
+            int up = a - 10;
+            int down = a + 10;
+            int left = a - 1;
+            int right = a + 1;
+            var moves = new List<int>();
+            moves.Add(up);
+            moves.Add(down);
+            moves.Add(left);
+            moves.Add(right);
 
-            string path = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
-            string wallOrFloor = File.ReadAllText(path);
-            var floors = new List<int>();
-
-            for (int i = 0; i < wallOrFloor.Length; i++)
-            {
-                if (wallOrFloor[i] == '0')
-                {
-                    floors.Add(i);
-                }
-            }
-
-            Console.WriteLine(floors[0]);
-            Console.WriteLine(floors.Last());
-            Console.WriteLine();
-            foreach (var item in floors)
+            foreach (var item in moves)
             {
                 Console.WriteLine(item);
             }

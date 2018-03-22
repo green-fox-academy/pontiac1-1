@@ -13,7 +13,7 @@ namespace WpfApp2
 {
     static class Draw
     {
-        static int position;
+        //static int position;
         public static void DrawMap(System.Windows.Controls.Primitives.UniformGrid map)
         {
             string levelPath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
@@ -66,7 +66,52 @@ namespace WpfApp2
             charactertile.Fill = characterbrush;
             map.Children.RemoveAt(Cells[position]);
             map.Children.Insert(Cells[position], charactertile);
-            
+        }
+
+
+        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, int position)
+        {
+            string levelPath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
+            string level = File.ReadAllText(levelPath);
+            var walkable = new List<int>();
+            for (int i = 0; i < level.Length; i++)
+            {
+                if (level[i] == '0')
+                {
+                    walkable.Add(i);
+                }
+            }
+
+            int up = position - 10;
+            int down = position + 10;
+            int left = position - 1;
+            int right = position + 1;
+            var moves = new List<int>();
+            moves.Add(up);
+            moves.Add(down);
+            moves.Add(left);
+            moves.Add(right);
+
+            var available = new List<int>();
+            for (int i = 0; i < moves.Count; i++)
+            {
+                if (walkable.Contains(moves[i]))
+                {
+                    available.Add(moves[i]);
+                }
+            }
+
+            var rnd = new Random();
+            int moveIndex = rnd.Next(0, available.Count);
+
+            var monstertile = new Rectangle();
+            var monster = new Image();
+            string uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\monster.png";
+            monster.Source = new BitmapImage(new Uri(uripath));
+            var monsterbrush = new ImageBrush(monster.Source);
+            monstertile.Fill = monsterbrush;
+            map.Children.RemoveAt(available[moveIndex]);
+            map.Children.Insert(available[moveIndex], monstertile);
         }
     }
 }
