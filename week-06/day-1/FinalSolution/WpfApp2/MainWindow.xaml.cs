@@ -45,7 +45,7 @@ namespace WpfApp2
             var rndPosition = rnd.Next(0, --maxindex);
 
             Draw.DrawMap(Map);
-            Draw.DrawHero(Map, "herofront");
+            Draw.DrawMonster(Map, "herofront");
             Draw.DrawMonster(Map, 22);
         }
 
@@ -54,25 +54,25 @@ namespace WpfApp2
             if (e.Key == Key.W)
             {
                 Controls.W(Map);
-                Draw.DrawMonster(Map, 22);
+                ControlsForMonsters.W(Map);
             }
 
             if (e.Key == Key.A)
             {
                 Controls.A(Map);
-                Draw.DrawMonster(Map, 22);
+                ControlsForMonsters.A(Map);
             }
 
             if (e.Key == Key.S)
             {
                 Controls.S(Map);
-                Draw.DrawMonster(Map, 22);
+                ControlsForMonsters.S(Map);
             }
 
             if (e.Key == Key.D)
             {
                 Controls.D(Map);
-                Draw.DrawMonster(Map, 22);
+                ControlsForMonsters.D(Map);
             }
         }
     }

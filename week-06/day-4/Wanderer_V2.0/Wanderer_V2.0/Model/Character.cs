@@ -8,10 +8,16 @@ namespace Wanderer_V2._0.Model
 {
     public class Character
     {
+        public string orient;
         public int position;
         public int HP;
         public int DP;
         public int SP;
         public string uripath;
+
+        public void Move(Character a, int change)
+        {
+            a.position += change;
+        }
     }
 }

@@ -47,7 +47,7 @@ namespace WpfApp2
             }
         }
 
-        public static void DrawHero(System.Windows.Controls.Primitives.UniformGrid map, string pose, int position = 0)
+        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, string pose, int position = 0)
         {
             int[] Cells = new int[100];
             for (int i = 0; i < 100; i++)
@@ -62,6 +62,7 @@ namespace WpfApp2
             hero.Source = new BitmapImage(new Uri(uripath));
             map.Children.Clear();
             DrawMap(map);
+            DrawMonster(map);
             var characterbrush = new ImageBrush(hero.Source);
             charactertile.Fill = characterbrush;
             map.Children.RemoveAt(Cells[position]);
@@ -69,7 +70,7 @@ namespace WpfApp2
         }
 
 
-        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, int position)
+        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, int position = 22)
         {
             string levelPath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\level1.txt";
             string level = File.ReadAllText(levelPath);

@@ -8,9 +8,9 @@ using System.Windows.Documents;
 
 namespace WpfApp2
 {
-    static class Controls
+    static class ControlsForMonsters
     {
-        static int position;     
+        static int position;
         public static void W(System.Windows.Controls.Primitives.UniformGrid map)
         {
 
@@ -37,13 +37,13 @@ namespace WpfApp2
                 else
                 {
                     Draw.DrawMonster(map, "heroback", position);
-                    
+
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 position += 10;
-                Draw.DrawMonster(map, "heroback", position);               
+                Draw.DrawMonster(map, "heroback", position);
             }
         }
 

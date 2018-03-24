@@ -54,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\Controller.cs" />
+    <Compile Include="Model\Level.cs" />
+    <Compile Include="View\Display.cs" />
+    <Compile Include="View\Move.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +72,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Boss.cs" />
+    <Compile Include="Model\Character.cs" />
+    <Compile Include="Model\Hero.cs" />
+    <Compile Include="Model\Monster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,5 +101,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\box.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\xwingdown.jpg" />
+    <Resource Include="Assets\xwingleft.jpg" />
+    <Resource Include="Assets\xwingright.jpg" />
+    <Resource Include="Assets\xwingup.jpg" />
+    <Resource Include="Assets\box.png" />
+    <Resource Include="Assets\boss.png" />
+    <Resource Include="Assets\hero-down.png" />
+    <Resource Include="Assets\hero-left.png" />
+    <Resource Include="Assets\hero-right.png" />
+    <Resource Include="Assets\hero-up.png" />
+    <Content Include="Assets\levels\level_1.txt" />
+    <Resource Include="Assets\skeleton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\levels\level_2.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

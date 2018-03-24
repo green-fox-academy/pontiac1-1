@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Wanderer_V2._0.Model;
+using Wanderer_V2._0.View;
 
 namespace Wanderer_V2._0
 {
@@ -20,9 +22,47 @@ namespace Wanderer_V2._0
     /// </summary>
     public partial class MainWindow : Window
     {
+        int initial = 0;
         public MainWindow()
         {
             InitializeComponent();
+            Screen.Columns = 10;
+            Screen.Rows = 10;
+           
+        }
+
+        private void WindowKeyDown(object sender, KeyEventArgs e)
+        {
+            var first = new Level(2);
+            var Miki = new Hero();
+            Miki.position = initial;
+
+            if (e.Key == Key.Enter)
+            {
+                Display.DrawLevel(Screen, first);
+                Display.DrawCharacter(Screen, Miki, first);
+            }
+
+            if (e.Key == Key.W)
+            {
+                Move.MoveUp(Screen, Miki, first);
+            }
+
+            if (e.Key == Key.A)
+            {
+                Move.MoveLeft(Screen, Miki, first);
+            }
+
+            if (e.Key == Key.S)
+            {
+                Move.MoveDown(Screen, Miki, first);
+            }
+
+            if (e.Key == Key.D)
+            {
+                Move.MoveRight(Screen, Miki, first);
+            }
+
         }
     }
 }

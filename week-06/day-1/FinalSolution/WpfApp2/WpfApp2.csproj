@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controls.cs" />
+    <Compile Include="ControlsForMonster.cs" />
     <Compile Include="Draw.cs" />
     <Compile Include="FoxDraw.cs" />
     <Compile Include="Hero.cs" />

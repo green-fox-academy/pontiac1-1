@@ -16,7 +16,6 @@ namespace WpfApp2
         public int position;
         public Monster(int position)
         {
-
             this.position = position;
         }
     }

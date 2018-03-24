@@ -18,7 +18,7 @@ namespace Wanderer_V2._0.Model
             HP = 2 * lvl * rnd.Next(1, 6);
             DP = lvl / 2 * rnd.Next(1, 6);
             SP = lvl * rnd.Next(1, 6);
-            uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-4\Wanderer_V2.0\Wanderer_V2.0\Assets\monster.png";
+            uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-4\Wanderer_V2.0\Wanderer_V2.0\Assets\skeleton.png";
         }
     }
 }
