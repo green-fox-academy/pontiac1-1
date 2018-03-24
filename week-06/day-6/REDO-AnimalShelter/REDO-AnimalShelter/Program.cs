@@ -10,6 +10,30 @@ namespace REDO_AnimalShelter
     {
         static void Main(string[] args)
         {
+            var animalShelter = new AnimalShelter();
+
+            animalShelter.Rescue(new Cat());
+            animalShelter.Rescue(new Dog("Furkesz"));
+            animalShelter.Rescue(new Parrot());
+            Console.WriteLine(animalShelter.ToString());
+
+            Console.WriteLine();
+
+            animalShelter.Heal();
+            Console.WriteLine(animalShelter.ToString());
+
+            Console.WriteLine();
+
+            animalShelter.AddAdopter("Kond");
+            Console.WriteLine(animalShelter.ToString());
+
+            Console.WriteLine();
+
+            animalShelter.FindNewOwner();
+            animalShelter.EarnDonation(30);
+            Console.WriteLine(animalShelter.ToString());
+
+            Console.Read();
         }
     }
 }

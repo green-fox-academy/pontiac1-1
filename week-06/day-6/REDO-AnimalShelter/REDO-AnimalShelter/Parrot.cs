@@ -8,9 +8,6 @@ namespace REDO_AnimalShelter
 {
     class Parrot : Animal
     {
-        public Parrot(string name) : base(name)
-        {
-            healCost = rnd.Next(4, 10);
-        }
+        public Parrot(string name = "Parrot") : base(name, Random.RandomInt(4, 10)) { }
     }
 }

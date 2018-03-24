@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace REDO_AnimalShelter
 {
-    class Dog
+    class Dog : Animal
     {
+        public Dog(string name = "Dog") : base(name, Random.RandomInt(0, 8)) { }
     }
 }
