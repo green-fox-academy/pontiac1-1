@@ -12,9 +12,10 @@ namespace REDO_Symmetry
         {
             var symmetricMatrix = new List<List<int>>
             {
-                new List<int> { 1, 0, 1 },
-                new List<int> { 0, 2, 2 },
-                new List<int> { 3, 2, 5 }
+                new List<int> { 1, 0, 1, 1 },
+                new List<int> { 0, 2, 2, 2 },
+                new List<int> { 1, 2, 5, 5 },
+                new List<int> { 1, 2, 5, 7 }
             };
 
             Console.WriteLine(TestSymm(symmetricMatrix));
