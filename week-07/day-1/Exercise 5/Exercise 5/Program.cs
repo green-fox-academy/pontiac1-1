@@ -11,12 +11,11 @@ namespace Exercise_5
             int[] numbers = new int[] { 5, 9, 1, 2, 3, 7, 5, 6, 7, 3, 7, 6, 8, 5, 4, 9, 6, 2 };
             //Query Syntax
             var FreqWithQuery = from n in numbers
-                                group n by n into Freq
-                                select Freq.Count();
+                                group n by n;
 
             foreach (var freq in FreqWithQuery)
             {
-                Console.WriteLine(freq);
+                Console.WriteLine(freq.Key + " " + freq.Count());
             }
 
             Console.WriteLine();
@@ -26,7 +25,7 @@ namespace Exercise_5
 
             foreach (var item in FreqWithMethod)
             {
-                Console.WriteLine(item.Count());
+                Console.WriteLine(item.Key + " " + item.Count());
             }
             
 
