@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="600" KeyDown="WindowKeyDown">
+    <Window.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="C:\Users\Test\Pictures\mars.jpg"/>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Window.Background>
     <UniformGrid Name="Map">
         
     </UniformGrid>

@@ -32,18 +32,18 @@ namespace WpfApp2
                 if (!walls.Contains(index -= 10))
                 {
                     position -= 10;
-                    Draw.DrawMonster(map, "heroback", position);
+                    Draw.DrawHero(map, "xwingup", position);
                 }
                 else
                 {
-                    Draw.DrawMonster(map, "heroback", position);
+                    Draw.DrawHero(map, "xwingup", position);
                     
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 position += 10;
-                Draw.DrawMonster(map, "heroback", position);               
+                Draw.DrawHero(map, "xwingup", position);               
             }
         }
 
@@ -65,16 +65,16 @@ namespace WpfApp2
             {
                 if (!walls.Contains(--index))
                 {
-                    Draw.DrawMonster(map, "heroleft", --position);
+                    Draw.DrawHero(map, "xwingleft", --position);
                 }
                 else
                 {
-                    Draw.DrawMonster(map, "heroleft", position);
+                    Draw.DrawHero(map, "xwingleft", position);
                 }
             }
             else
             {
-                Draw.DrawMonster(map, "heroleft", position);
+                Draw.DrawHero(map, "xwingleft", position);
             }
         }
 
@@ -97,17 +97,17 @@ namespace WpfApp2
                 if (!walls.Contains(index += 10))
                 {
                     position += 10;
-                    Draw.DrawMonster(map, "herofront", position);
+                    Draw.DrawHero(map, "xwingdown", position);
                 }
                 else
                 {
-                    Draw.DrawMonster(map, "herofront", position);
+                    Draw.DrawHero(map, "xwingdown", position);
                 }
             }
             catch (IndexOutOfRangeException)
             {
                 position -= 10;
-                Draw.DrawMonster(map, "herofront", position);
+                Draw.DrawHero(map, "xwingdown", position);
             }
         }
 
@@ -129,16 +129,16 @@ namespace WpfApp2
             {
                 if (!walls.Contains(++index))
                 {
-                    Draw.DrawMonster(map, "heroright", ++position);
+                    Draw.DrawHero(map, "xwingright", ++position);
                 }
                 else
                 {
-                    Draw.DrawMonster(map, "heroright", position);
+                    Draw.DrawHero(map, "xwingright", position);
                 }
             }
             else
             {
-                Draw.DrawMonster(map, "heroright", position);
+                Draw.DrawHero(map, "xwingright", position);
             }
         }
     }

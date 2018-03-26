@@ -31,7 +31,7 @@ namespace REDO_Words
                     match++;
                 }
                 else
-                    familyFriendlyContent.Append(word);
+                    familyFriendlyContent.Append(word + " ");
             }
 
             File.WriteAllText(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-6\REDO-Words\REDO-Words\FFcontent.txt", familyFriendlyContent.ToString());

@@ -64,10 +64,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controls.cs" />
-    <Compile Include="ControlsForMonster.cs" />
     <Compile Include="Draw.cs" />
     <Compile Include="FoxDraw.cs" />
-    <Compile Include="Hero.cs" />
     <Compile Include="HUD.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -75,8 +73,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Map.cs" />
-    <Compile Include="Monster.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -130,6 +126,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\xwingdown.jpg" />
+    <Resource Include="Assets\xwingleft.jpg" />
+    <Resource Include="Assets\xwingright.jpg" />
+    <Resource Include="Assets\xwingup.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

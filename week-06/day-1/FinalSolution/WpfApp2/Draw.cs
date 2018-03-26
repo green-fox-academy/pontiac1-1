@@ -27,27 +27,19 @@ namespace WpfApp2
                 {
                     var tile = new Rectangle();
                     map.Children.Add(tile);
-                    var floor = new Image();
-                    floor.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\floor.png"));
-                    var floorbrush = new ImageBrush(floor.Source);
-                    tile.Fill = floorbrush;
                     floors.Add(i);
                 }
 
                 else
-                {
-                    var walltile = new Rectangle();
-                    map.Children.Add(walltile);
+                {                  
                     var wall = new Image();
-                    wall.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\wall.png"));
-                    var wallbrush = new ImageBrush(wall.Source);
-                    walltile.Fill = wallbrush;
-                    walls.Add(i);
+                    wall.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\box.png"));
+                    map.Children.Add(wall);
                 }
             }
         }
 
-        public static void DrawMonster(System.Windows.Controls.Primitives.UniformGrid map, string pose, int position = 0)
+        public static void DrawHero(System.Windows.Controls.Primitives.UniformGrid map, string pose, int position = 0)
         {
             int[] Cells = new int[100];
             for (int i = 0; i < 100; i++)
@@ -58,11 +50,10 @@ namespace WpfApp2
             
             var charactertile = new Rectangle();
             var hero = new Image();
-            string uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\" + pose + ".png";
+            string uripath = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-06\day-1\FinalSolution\WpfApp2\Assets\" + pose + ".jpg";
             hero.Source = new BitmapImage(new Uri(uripath));
             map.Children.Clear();
             DrawMap(map);
-            DrawMonster(map);
             var characterbrush = new ImageBrush(hero.Source);
             charactertile.Fill = characterbrush;
             map.Children.RemoveAt(Cells[position]);

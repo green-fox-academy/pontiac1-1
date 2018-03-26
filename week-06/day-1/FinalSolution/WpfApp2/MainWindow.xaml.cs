@@ -45,8 +45,7 @@ namespace WpfApp2
             var rndPosition = rnd.Next(0, --maxindex);
 
             Draw.DrawMap(Map);
-            Draw.DrawMonster(Map, "herofront");
-            Draw.DrawMonster(Map, 22);
+            Draw.DrawHero(Map, "xwingright");
         }
 
         private void WindowKeyDown(object sender, KeyEventArgs e)
@@ -54,25 +53,22 @@ namespace WpfApp2
             if (e.Key == Key.W)
             {
                 Controls.W(Map);
-                ControlsForMonsters.W(Map);
             }
 
             if (e.Key == Key.A)
             {
                 Controls.A(Map);
-                ControlsForMonsters.A(Map);
             }
 
             if (e.Key == Key.S)
             {
                 Controls.S(Map);
-                ControlsForMonsters.S(Map);
             }
+
 
             if (e.Key == Key.D)
             {
                 Controls.D(Map);
-                ControlsForMonsters.D(Map);
             }
         }
     }
