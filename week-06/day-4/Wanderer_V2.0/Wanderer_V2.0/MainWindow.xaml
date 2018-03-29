@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wanderer_V2._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600" KeyDown="WindowKeyDown">
-    
+        Title="MainWindow" Height="600" Width="1000" KeyDown="WindowKeyDown">
+
     <Window.Background>
         <ImageBrush>
             <ImageBrush.ImageSource>
-                <BitmapImage UriSource="C:\Users\Test\Pictures\mars.jpg"/>
+                <BitmapImage UriSource="C:\Users\Test\Pictures\background.png"/>
             </ImageBrush.ImageSource>
         </ImageBrush>
     </Window.Background>
-    
+
     <UniformGrid Name="Screen">
         
     </UniformGrid>
+    
 </Window>

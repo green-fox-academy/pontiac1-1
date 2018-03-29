@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4919D7C-9C18-421B-862A-F40F2B65EAF8}</ProjectGuid>
+    <ProjectGuid>{9A670F9C-7627-4BAC-BCD8-D457A788A002}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Wanderer_V2._0</RootNamespace>
-    <AssemblyName>Wanderer_V2.0</AssemblyName>
+    <RootNamespace>Sudoku</RootNamespace>
+    <AssemblyName>Sudoku</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,8 +55,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controls\Controller.cs" />
-    <Compile Include="Controls\Timer.cs" />
-    <Compile Include="Model\Level.cs" />
+    <Compile Include="Model\Evaluate.cs" />
+    <Compile Include="Model\Values.cs" />
     <Compile Include="View\Display.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -72,10 +72,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Boss.cs" />
-    <Compile Include="Model\Character.cs" />
-    <Compile Include="Model\Hero.cs" />
-    <Compile Include="Model\Monster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -102,15 +98,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\floor.jpg" />
-    <Resource Include="Assets\heroright.png" />
-    <Resource Include="Assets\heroleft.png" />
-    <Resource Include="Assets\boss.png" />
-    <Content Include="Assets\levels\level_1.txt" />
+    <Resource Include="Assets\0.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\levels\level_2.txt" />
+    <Resource Include="Assets\1.png" />
+    <Resource Include="Assets\2.png" />
+    <Resource Include="Assets\3.png" />
+    <Resource Include="Assets\4.png" />
+    <Resource Include="Assets\5.png" />
+    <Resource Include="Assets\6.png" />
+    <Resource Include="Assets\7.png" />
+    <Resource Include="Assets\8.png" />
+    <Resource Include="Assets\9.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\level1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
