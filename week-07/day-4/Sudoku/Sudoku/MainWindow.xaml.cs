@@ -102,6 +102,11 @@ namespace Sudoku
             {
                 Controller.Delete(Display.position, Board);
             }
+
+            if (e.Key == Key.Enter)
+            {
+                Evaluate.ToEvaluate(Board);
+            }
         }
     }
 }

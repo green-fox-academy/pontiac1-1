@@ -98,6 +98,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 1);
+
             Display.DrawBoard(board);
         }
 
@@ -109,6 +113,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 2);
+
             Display.DrawBoard(board);
         }
 
@@ -120,6 +128,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 3);
+
             Display.DrawBoard(board);
         }
 
@@ -131,6 +143,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 4);
+
             Display.DrawBoard(board);
         }
 
@@ -142,6 +158,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 5);
+
             Display.DrawBoard(board);
         }
 
@@ -153,6 +173,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 6);
+
             Display.DrawBoard(board);
         }
 
@@ -164,6 +188,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 7);
+
             Display.DrawBoard(board);
         }
 
@@ -175,6 +203,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 8);
+
             Display.DrawBoard(board);
         }
 
@@ -186,6 +218,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 9);
+
             Display.DrawBoard(board);
         }
 
@@ -197,6 +233,10 @@ namespace Sudoku.Controls
 
             Values.EnteredValues.RemoveAt(index);
             Values.EnteredValues.Insert(index, brush);
+
+            Values.lvlValues.RemoveAt(index);
+            Values.lvlValues.Insert(index, 0);
+
             Display.DrawBoard(board);
         }
 
