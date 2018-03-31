@@ -115,5 +115,8 @@
   <ItemGroup>
     <Resource Include="Assets\level1.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\level2.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,28 +14,35 @@ namespace Sudoku.Model
     {
         public static List<ImageBrush> EnteredValues;
         public static List<List<int>> lvlValues;
-        public static Dictionary<int, int> Inter;
+        
 
         public static void Fill()
         {
-            lvlValues = new List<List<int>>();
-            lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 2, 3, 1, 0 });
-            lvlValues.Add(new List<int> { 2, 0, 0, 4, 0, 0, 0, 0, 0 });
-            lvlValues.Add(new List<int> { 5, 9, 0, 6, 8, 0, 0, 7, 4 });
-            lvlValues.Add(new List<int> { 6, 5, 8, 9, 0, 7, 0, 2, 0 });
-            lvlValues.Add(new List<int> { 0, 7, 0, 0, 0, 0, 0, 6, 0 });
-            lvlValues.Add(new List<int> { 0, 2, 0, 3, 0, 6, 7, 8, 1 });
-            lvlValues.Add(new List<int> { 9, 6, 0, 0, 7, 3, 0, 5, 2 });
-            lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 9, 0, 0, 8 });
-            lvlValues.Add(new List<int> { 0, 8, 2, 5, 0, 0, 0, 0, 0 });
 
-            //for (int i = 0; i < 9; i+=9)
-            //{
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        Inter.Add(i * 9 + j, 'i'+'j');
-            //    }
-            //}
+            string path = @"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\level2.txt";
+            int txtValues = int.Parse(File.ReadAllLines(path)[0][0].ToString());
+            lvlValues = new List<List<int>>();
+            for (int i = 0; i < 9; i++)
+            {
+                lvlValues.Add(new List<int>());
+                for (int j = 0; j < 9; j++)
+                {
+                    lvlValues[i].Insert(j, int.Parse(File.ReadAllLines(path)[i][j].ToString()));
+                }
+            }
+            //string path = @".Assets\level1.txt";
+            //int txtValues = int.Parse(File.ReadAllLines(path)[0]);
+            //lvlValues = new List<List<int>>();
+            //lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 2, 3, 1, 0 });
+            //lvlValues.Add(new List<int> { 2, 0, 0, 4, 0, 0, 0, 0, 0 });
+            //lvlValues.Add(new List<int> { 5, 9, 0, 6, 8, 0, 0, 7, 4 });
+            //lvlValues.Add(new List<int> { 6, 5, 8, 9, 0, 7, 0, 2, 0 });
+            //lvlValues.Add(new List<int> { 0, 7, 0, 0, 0, 0, 0, 6, 0 });
+            //lvlValues.Add(new List<int> { 0, 2, 0, 3, 0, 6, 7, 8, 1 });
+            //lvlValues.Add(new List<int> { 9, 6, 0, 0, 7, 3, 0, 5, 2 });
+            //lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 9, 0, 0, 8 });
+            //lvlValues.Add(new List<int> { 0, 8, 2, 5, 0, 0, 0, 0, 0 });
+
 
             var empty = new Image();
             empty.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\0.png"));
