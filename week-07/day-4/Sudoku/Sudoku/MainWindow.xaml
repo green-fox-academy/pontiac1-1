@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:Sudoku"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="600" Name="Main" KeyDown="WindowKeyDown">
-    <UniformGrid Name="Board">
+    <Canvas Name="Table">
+        <UniformGrid Name="Board">
       
-    </UniformGrid>
-
+        </UniformGrid>
+    </Canvas>
 </Window>

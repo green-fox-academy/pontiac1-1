@@ -27,85 +27,87 @@ namespace Sudoku
         {
             InitializeComponent();
             Values.Fill();
-            Display.DrawBoard(Board);
+            Display.DrawTable(Table, Main);
+            Display.DrawBoard(Board, Main);
+            Protection.Protect();
         }
 
         private void WindowKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.W)
             {
-                Controller.W(Board);
+                Controller.W(Board, Main);
             }
 
             if (e.Key == Key.A)
             {
-                Controller.A(Board);
+                Controller.A(Board, Main);
             }
 
             if (e.Key == Key.S)
             {
-                Controller.S(Board);
+                Controller.S(Board, Main);
             }
 
             if (e.Key == Key.D)
             {
-                Controller.D(Board);
+                Controller.D(Board, Main);
             }
 
             //To enter Values
             if (e.Key == Key.NumPad1)
             {
-                Controller.One(Display.position, Board);
+                Controller.One(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad2)
             {
-                Controller.Two(Display.position, Board);
+                Controller.Two(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad3)
             {
-                Controller.Three(Display.position, Board);
+                Controller.Three(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad4)
             {
-                Controller.Four(Display.position, Board);
+                Controller.Four(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad5)
             {
-                Controller.Five(Display.position, Board);
+                Controller.Five(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad6)
             {
-                Controller.Six(Display.position, Board);
+                Controller.Six(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad7)
             {
-                Controller.Seven(Display.position, Board);
+                Controller.Seven(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad8)
             {
-                Controller.Eight(Display.position, Board);
+                Controller.Eight(Display.position, Board, Main);
             }
 
             if (e.Key == Key.NumPad9)
             {
-                Controller.Nine(Display.position, Board);
+                Controller.Nine(Display.position, Board, Main);
             }
 
             if (e.Key == Key.Back)
             {
-                Controller.Delete(Display.position, Board);
+                Controller.Delete(Display.position, Board, Main);
             }
 
             if (e.Key == Key.Enter)
             {
-                Evaluate.ToEvaluate(Board);
+                Evaluate.Check(Board);
             }
         }
     }

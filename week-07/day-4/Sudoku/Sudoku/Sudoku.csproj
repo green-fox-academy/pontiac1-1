@@ -56,6 +56,7 @@
     </ApplicationDefinition>
     <Compile Include="Controls\Controller.cs" />
     <Compile Include="Model\Evaluate.cs" />
+    <Compile Include="Model\Protection.cs" />
     <Compile Include="Model\Values.cs" />
     <Compile Include="View\Display.cs" />
     <Page Include="MainWindow.xaml">
