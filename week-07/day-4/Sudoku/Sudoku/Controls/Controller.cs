@@ -96,13 +96,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\1.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index/9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 1);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 1);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Two(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -111,13 +118,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\2.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 2);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 2);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Three(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -126,13 +140,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\3.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 3);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 3);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Four(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -141,13 +162,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\4.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 4);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 4);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Five(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -156,13 +184,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\5.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 5);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 5);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Six(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -171,13 +206,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\6.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index/9].RemoveAt(index%9);
-            Values.lvlValues[index/9].Insert(index%9, 6);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 6);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Seven(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -186,13 +228,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\7.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index/9].RemoveAt(index%9);
-            Values.lvlValues[index / 9].Insert(index%9, 7);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 7);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Eight(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -201,13 +250,20 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\8.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 8);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 8);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
         }
 
         public static void Nine(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -216,13 +272,21 @@ namespace Sudoku.Controls
             num.Source = new BitmapImage(new Uri(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\Sudoku\Sudoku\Assets\9.png"));
             var brush = new ImageBrush(num.Source);
 
-            Values.EnteredValues.RemoveAt(index);
-            Values.EnteredValues.Insert(index, brush);
+            if (!Protection.protectedIndex.Contains(index))
+            {
+                Values.EnteredValues.RemoveAt(index);
+                Values.EnteredValues.Insert(index, brush);
 
-            Values.lvlValues[index / 9].RemoveAt(index % 9);
-            Values.lvlValues[index / 9].Insert(index % 9, 9);
+                Values.lvlValues[index / 9].RemoveAt(index % 9);
+                Values.lvlValues[index / 9].Insert(index % 9, 9);
 
-            Display.DrawBoard(board, main);
+                Display.DrawBoard(board, main);
+            }
+            else
+            {
+                Display.DrawBoard(board, main);
+            }
+
         }
 
         public static void Delete(int index, System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)

@@ -19,15 +19,15 @@ namespace Sudoku.Model
         public static void Fill()
         {
             lvlValues = new List<List<int>>();
-            lvlValues.Add(new List<int> { 8, 2, 4, 9, 5, 3, 6, 7, 1 });
-            lvlValues.Add(new List<int> { 6, 3, 5, 8, 1, 7, 9, 2, 4 });
-            lvlValues.Add(new List<int> { 7, 1, 9, 6, 2, 4, 8, 5, 3 });
-            lvlValues.Add(new List<int> { 5, 8, 7, 2, 9, 1, 3, 4, 6 });
-            lvlValues.Add(new List<int> { 1, 4, 2, 7, 3, 6, 5, 8, 9 });
-            lvlValues.Add(new List<int> { 3, 9, 6, 4, 8, 5, 2, 1, 7 });
-            lvlValues.Add(new List<int> { 2, 6, 1, 5, 4, 9, 7, 3, 8 });
-            lvlValues.Add(new List<int> { 4, 7, 8, 3, 6, 2, 1, 9, 5 });
-            lvlValues.Add(new List<int> { 9, 5, 3, 1, 7, 8, 0, 6, 2 });
+            lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 2, 3, 1, 0 });
+            lvlValues.Add(new List<int> { 2, 0, 0, 4, 0, 0, 0, 0, 0 });
+            lvlValues.Add(new List<int> { 5, 9, 0, 6, 8, 0, 0, 7, 4 });
+            lvlValues.Add(new List<int> { 6, 5, 8, 9, 0, 7, 0, 2, 0 });
+            lvlValues.Add(new List<int> { 0, 7, 0, 0, 0, 0, 0, 6, 0 });
+            lvlValues.Add(new List<int> { 0, 2, 0, 3, 0, 6, 7, 8, 1 });
+            lvlValues.Add(new List<int> { 9, 6, 0, 0, 7, 3, 0, 5, 2 });
+            lvlValues.Add(new List<int> { 0, 0, 0, 0, 0, 9, 0, 0, 8 });
+            lvlValues.Add(new List<int> { 0, 8, 2, 5, 0, 0, 0, 0, 0 });
 
             //for (int i = 0; i < 9; i+=9)
             //{

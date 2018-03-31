@@ -107,7 +107,7 @@ namespace Sudoku
 
             if (e.Key == Key.Enter)
             {
-                Evaluate.Check(Board);
+                Evaluate.Check(Board, Table);
             }
         }
     }

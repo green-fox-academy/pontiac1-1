@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Windows.Shapes;
 using System.Windows.Media;
+using System.Windows.Controls;
 
 namespace Sudoku.Model
 {
     class Evaluate
     {
-        public static void Check(System.Windows.Controls.Primitives.UniformGrid board)
+        public static void Check(System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Controls.Canvas table)
         {
             //check for columns
             int columnCheck = 0;
@@ -78,17 +79,17 @@ namespace Sudoku.Model
            
             if (rowCheck == 9 || columnCheck == 9 || tableCheck == 9)
             {
-                board.Children.Clear();
-                var green = new Rectangle();
-                green.Fill = Brushes.Green;
-                board.Children.Add(green);
+                table.Children.Clear();
+                var text = new TextBox();
+                text.Text = "You win!";
+                table.Children.Add(text);
             }
             else
             {
-                board.Children.Clear();
-                var red = new Rectangle();
-                red.Fill = Brushes.Red;
-                board.Children.Add(red);
+                table.Children.Clear();
+                var text = new TextBox();
+                text.Text = "No good!";
+                table.Children.Add(text);
             }
         }
     }
