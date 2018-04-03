@@ -71,9 +71,7 @@ namespace Sudoku.View
             line4.Y1 = 2 * main.Height / 3;
             line4.X2 = main.Width;
             line4.Y2 = 2 * main.Height / 3;
-            table.Children.Add(line4);
-
-            
+            table.Children.Add(line4);           
 
         }
         public static void DrawBoard(System.Windows.Controls.Primitives.UniformGrid board, System.Windows.Window main)
@@ -100,7 +98,6 @@ namespace Sudoku.View
                     Cell.Stroke = Brushes.Black;
                     Cell.StrokeThickness = 0.3;                   
                 }
-
 
                 board.Children.Add(Cell);              
             }
