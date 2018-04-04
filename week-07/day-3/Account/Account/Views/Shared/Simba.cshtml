@@ -1,0 +1,36 @@
+﻿@model Account.Models.BankAccounts
+@{
+    ViewData["Title"] = "Simba";
+}
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Type</th>
+        <th>index</th>
+        <th>Is King?</th>
+    </tr>
+    @for (int i = 0; i < BankAccounts.Accounts.Count; i++)
+    {
+        <tr>
+            <td>@BankAccounts.Accounts[i].Name</td>
+            <td>@BankAccounts.Accounts[i].Balance</td>
+            <td>@BankAccounts.Accounts[i].Type</td>
+            <td>@i</td>
+            <td>@BankAccounts.Accounts[i].IsKing</td>
+            <td>
+                <form method="post" action="http://localhost:61136/Simba?index=@i">
+                    <input type="submit" value="increase"/>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<form method="post" action="Add">
+    <input type="text" name="Name" id="Name" placeholder="Name" />
+    <input type="number" name="Balance" id="Balance" placeholder="Balance" />
+    <input type="text" name="Type" id="Type" placeholder="Type" />
+    <label>Is King?</label><input type="checkbox" value="true" name="IsKing" />
+    <input type="submit" value="Add Account" />
+</form>
