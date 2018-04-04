@@ -9,13 +9,13 @@ namespace Account.Controllers
 {
     public class BankController : Controller
     {
-        static BankAccounts bankAccounts = new BankAccounts();
+        //static BankAccounts bankAccounts = new BankAccounts();
 
         [Route("Simba")]
         [HttpGet]
         public IActionResult Simba()
         {
-            return View(bankAccounts);
+            return View(BankAccounts.Accounts);
         }
 
         [Route("Simba")]
@@ -23,7 +23,7 @@ namespace Account.Controllers
         public IActionResult Simba(int index)
         {
             BankAccounts.Accounts[index].Increase();
-            return View(bankAccounts);
+            return View(BankAccounts.Accounts);
         }
 
         [Route("Add")]
@@ -31,7 +31,7 @@ namespace Account.Controllers
         public IActionResult Simba(string name, double balance, string type, bool isking)
         {
             BankAccounts.Accounts.Add(new BankAccount() { Name = name, Balance = balance, Type = type, IsKing = isking});
-            return View(bankAccounts);
+            return View(BankAccounts.Accounts);
         }
     }
 }

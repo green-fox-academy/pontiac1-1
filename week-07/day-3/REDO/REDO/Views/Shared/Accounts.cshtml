@@ -1,0 +1,37 @@
+﻿@model List<BankAccount>;
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+<h2>Accounts</h2>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Balance</th>
+        <th>Type</th>
+        <th>King</th>
+        <th>Increase</th>
+    </tr>
+    @for (int i = 0; i < BankAccounts.Accounts.Count; i++)
+    {
+    <tr>
+        <td>@BankAccounts.Accounts[i].Name</td>
+        <td>@BankAccounts.Accounts[i].Balance</td>
+        <td>@BankAccounts.Accounts[i].Type</td>
+        <td>@BankAccounts.Accounts[i].IsKing</td>
+        <td>
+            <form method="post" action="/Accounts?index=@i">
+                <input type="submit" value="Increase" style="background-color:transparent; border: none; box-shadow: none;"/>
+            </form>
+        </td>
+    </tr>
+    }
+</table>
+
+<form method="post" action="add">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="number" name="balance" placeholder="Balance" />
+    <input type="text" name="type" placeholder="Type" />
+    <label>King?</label><input type="checkbox" name="isking" value="true" />
+    <input type="submit" value="Add" />
+</form>
