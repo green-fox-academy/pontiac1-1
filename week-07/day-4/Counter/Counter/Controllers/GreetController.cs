@@ -28,7 +28,7 @@ namespace Counter.Controllers
         [HttpPost]
         public IActionResult Greet(string name)
         {
-            return View(greet.Greet(name));
+            return View((object)greet.Greet(name));
         }
     }
 }
