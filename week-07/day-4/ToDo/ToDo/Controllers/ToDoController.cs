@@ -36,5 +36,12 @@ namespace ToDo.Controllers
             todoInter.DelToDo(ToDoList.myList[index]);
             return View(ToDoList.myList);
         }
+
+        [Route("Save")]
+        public IActionResult Save(int index)
+        {
+            todoInter.SaveToDo(ToDoList.myList[index]);
+            return View("saved");
+        }
     }
 }

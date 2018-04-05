@@ -20,7 +20,12 @@
             <td>@Model[i].Priority</td>
             <td>
                 <form action="Del" method="post">
-                    <input type="submit" value="remove" name="@i"/>
+                    <input type="submit" value="remove" name="@i" />
+                </form>
+            </td>
+            <td>
+                <form action="Save" method="post">
+                    <input type="submit" value="save" name="@i" />
                 </form>
             </td>
         </tr>
