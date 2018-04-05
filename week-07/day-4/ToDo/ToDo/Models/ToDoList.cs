@@ -8,9 +8,6 @@ namespace ToDo.Models
 {
     public class ToDoList
     {
-        public static List<ToDos> myList = new List<ToDos>()
-        {
-            new ToDos(){Content="keenf", Priority=false}
-        };
+        public static List<ToDos> myList = new List<ToDos>();
     }
 }

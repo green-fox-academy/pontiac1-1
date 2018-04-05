@@ -10,6 +10,7 @@ namespace ToDo.Services
     {
         void AddToDo(ToDos a);
         void DelToDo(ToDos a);
-        void SaveToDo(ToDos a);
+        void Read();
+        void ReadAll();
     }
 }

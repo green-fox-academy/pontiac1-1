@@ -12,7 +12,11 @@ namespace ToDo.Services
     {
         public void AddToDo(ToDos a)
         {
-            ToDoList.myList.Add(a);
+            XmlSerializer serializer = new XmlSerializer(typeof(ToDos));
+            using (TextWriter tw = new StreamWriter(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\"+ToDoList.myList.Count+".xml"))
+            {
+                serializer.Serialize(tw, a);
+            }
         }
 
         public void DelToDo(ToDos a)
@@ -20,12 +24,25 @@ namespace ToDo.Services
             ToDoList.myList.Remove(a);
         }
 
-        public void SaveToDo(ToDos a)
+        public void Read()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(ToDos));
-            using (TextWriter tw = new StreamWriter(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\saved.xml"))
+                XmlSerializer deserializer = new XmlSerializer(typeof(ToDos));
+                TextReader reader = new StreamReader(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + ToDoList.myList.Count + ".xml");
+                object obj = deserializer.Deserialize(reader);
+                ToDoList.myList.Add((ToDos)obj);
+                reader.Close();          
+        }
+
+        public void ReadAll()
+        {
+            var fileCount = Directory.EnumerateFiles(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\", "*.xml", SearchOption.AllDirectories).Count();
+            for (int i = 0; i < fileCount; i++)
             {
-                serializer.Serialize(tw, a);
+                XmlSerializer deserializer = new XmlSerializer(typeof(ToDos));
+                TextReader reader = new StreamReader(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + i + ".xml");
+                object obj = deserializer.Deserialize(reader);
+                ToDoList.myList.Add((ToDos)obj);
+                reader.Close();
             }
         }
     }

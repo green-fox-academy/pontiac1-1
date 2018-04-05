@@ -20,14 +20,17 @@ namespace ToDo.Controllers
         [Route("List")]
         public IActionResult List()
         {
-            return View(ToDoList.myList);
+            todoInter.ReadAll();
+            return View((object)ToDoList.myList);
         }
 
         [Route("Add")]
         public IActionResult List(string content, bool priority)
         {
             todoInter.AddToDo(new ToDos { Content = content, Priority = priority });
+            todoInter.Read();
             return View((object)ToDoList.myList);
+            
         }
 
         [Route("Del")]
@@ -37,11 +40,11 @@ namespace ToDo.Controllers
             return View(ToDoList.myList);
         }
 
-        [Route("Save")]
-        public IActionResult Save(int index)
-        {
-            todoInter.SaveToDo(ToDoList.myList[index]);
-            return View("saved");
-        }
+        //[Route("Save")]
+        //public IActionResult Save(int index)
+        //{
+            
+        //    return View("saved");
+        //}
     }
 }
