@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Anagram.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace REDO
+namespace Anagram
 {
     public class Startup
     {
@@ -22,11 +23,13 @@ namespace REDO
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<IAnagram, AnagramInjection>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseMvc();
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -43,7 +46,7 @@ namespace REDO
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Bank}/{action=Accounts}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

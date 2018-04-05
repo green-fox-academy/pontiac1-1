@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Counter.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace REDO
+namespace Counter
 {
     public class Startup
     {
@@ -22,6 +23,8 @@ namespace REDO
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<ICounter, CountWithRecursion>();
+            services.AddSingleton<IGreetings, Greetings>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +46,7 @@ namespace REDO
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Bank}/{action=Accounts}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
