@@ -28,7 +28,7 @@ namespace ToDo.Controllers
         public IActionResult List(string content, bool priority)
         {
             todoInter.AddToDo(new ToDos { Content = content, Priority = priority });
-            todoInter.Read();
+            todoInter.Read(content);
             return View((object)ToDoList.myList);
             
         }
@@ -39,12 +39,5 @@ namespace ToDo.Controllers
             todoInter.DelToDo(ToDoList.myList[index]);
             return View(ToDoList.myList);
         }
-
-        //[Route("Save")]
-        //public IActionResult Save(int index)
-        //{
-            
-        //    return View("saved");
-        //}
     }
 }

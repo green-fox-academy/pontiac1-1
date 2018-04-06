@@ -13,7 +13,7 @@ namespace ToDo.Services
         public void AddToDo(ToDos a)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(ToDos));
-            using (TextWriter tw = new StreamWriter(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\"+ToDoList.myList.Count+".xml"))
+            using (TextWriter tw = new StreamWriter(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\"+ a.Content + ".xml"))
             {
                 serializer.Serialize(tw, a);
             }
@@ -22,12 +22,13 @@ namespace ToDo.Services
         public void DelToDo(ToDos a)
         {
             ToDoList.myList.Remove(a);
+            File.Delete(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + a.Content + ".xml");
         }
 
-        public void Read()
+        public void Read(string content)
         {
                 XmlSerializer deserializer = new XmlSerializer(typeof(ToDos));
-                TextReader reader = new StreamReader(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + ToDoList.myList.Count + ".xml");
+                TextReader reader = new StreamReader(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + content + ".xml");
                 object obj = deserializer.Deserialize(reader);
                 ToDoList.myList.Add((ToDos)obj);
                 reader.Close();          
@@ -35,11 +36,11 @@ namespace ToDo.Services
 
         public void ReadAll()
         {
-            var fileCount = Directory.EnumerateFiles(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\", "*.xml", SearchOption.AllDirectories).Count();
-            for (int i = 0; i < fileCount; i++)
+            string[] files = Directory.GetFiles(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\", "*.xml");
+            foreach (var file in files)
             {
                 XmlSerializer deserializer = new XmlSerializer(typeof(ToDos));
-                TextReader reader = new StreamReader(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + i + ".xml");
+                TextReader reader = new StreamReader(file);
                 object obj = deserializer.Deserialize(reader);
                 ToDoList.myList.Add((ToDos)obj);
                 reader.Close();

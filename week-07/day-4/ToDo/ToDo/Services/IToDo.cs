@@ -10,7 +10,7 @@ namespace ToDo.Services
     {
         void AddToDo(ToDos a);
         void DelToDo(ToDos a);
-        void Read();
+        void Read(string content);
         void ReadAll();
     }
 }
