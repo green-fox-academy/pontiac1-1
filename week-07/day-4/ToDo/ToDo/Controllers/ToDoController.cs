@@ -28,15 +28,18 @@ namespace ToDo.Controllers
         public IActionResult List(string content, bool priority)
         {
             todoInter.AddToDo(new ToDos { Content = content, Priority = priority });
-            todoInter.Read(content);
+            ToDoList.myList.Clear();
+            todoInter.ReadAll();
             return View((object)ToDoList.myList);
             
         }
 
         [Route("Del")]
-        public IActionResult List(int index)
+        public IActionResult List(string content)
         {
-            todoInter.DelToDo(ToDoList.myList[index]);
+            todoInter.DelToDo(content);
+            ToDoList.myList.Clear();
+            todoInter.ReadAll();
             return View(ToDoList.myList);
         }
     }

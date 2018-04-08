@@ -19,10 +19,9 @@ namespace ToDo.Services
             }
         }
 
-        public void DelToDo(ToDos a)
+        public void DelToDo(string content)
         {
-            ToDoList.myList.Remove(a);
-            File.Delete(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + a.Content + ".xml");
+            File.Delete(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + content + ".xml");
         }
 
         public void Read(string content)
@@ -45,6 +44,7 @@ namespace ToDo.Services
                 ToDoList.myList.Add((ToDos)obj);
                 reader.Close();
             }
+            ToDoList.myList.GroupBy(x => x.Priority==true);
         }
     }
 }

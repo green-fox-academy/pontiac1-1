@@ -9,7 +9,7 @@ namespace ToDo.Services
     public interface IToDo
     {
         void AddToDo(ToDos a);
-        void DelToDo(ToDos a);
+        void DelToDo(string content);
         void Read(string content);
         void ReadAll();
     }

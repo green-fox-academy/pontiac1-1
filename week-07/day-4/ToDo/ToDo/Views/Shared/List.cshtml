@@ -3,35 +3,48 @@
     <title></title>
 </head>
 <body>
+    <div style="width: 50vw; text-align:center; margin: 0 auto;">
+        <form action="Add" method="post">
+            <label>Content</label><input type="text" name="content" value="" style="width: 20vw; margin: 2vw 2vw 2vw 1vw; height: 5vh;"/>
+            <lable>Priority</lable><input type="checkbox" name="priority" value="true" style="margin: 2vw 2vw 2vw 1vw;"/>
+            <input type="submit" id="addbtn" name="name" value="Add ToDo" style="margin: 2vw 2vw 2vw 1vw; background-color: transparent; border: 1px solid black; height: 5vh"/>
+        </form>
+    </div>
 
-    <table border="1">
-        <tr>
-            <th>content</th>
-            <th>priority</th>
-            <th>remove</th>
+    <table border="1" style="margin: 0 auto; font-size: 18px">
+        <tr style="height: 5vh;">
+            <th style="width: 40vw; text-align:center">content</th>
+            <th style="width: 5vw; text-align:center">priority</th>
+            <th style="width: 5vw; text-align:center">remove</th>
         </tr>
-
         @for (int i = 0; i < Model.Count; i++)
     {
-        <tr>
+        if (@Model[i].Priority == true)
+        {
+            <tr style="height: 5vh;">
+                <td>@Model[i].Content</td>
+                <td style="text-align: center; color:red;">@Model[i].Priority</td>
+                <td>
+                    <form action="Del?content=@Model[i].Content" method="post">
+                        <input type="submit" value="remove" style="background:transparent; box-shadow:none; border: none;" id="delbtn" />
+                    </form>
+                </td>
+            </tr>
+    }
+    else
+    {
+        <tr style="height: 5vh;">
             <td>@Model[i].Content</td>
-            <td>@Model[i].Priority</td>
+            <td style="text-align: center;">@Model[i].Priority</td>
             <td>
-                <form action="Del" method="post">
-                    <input type="submit" value="remove" name="@i" />
+                <form action="Del?content=@Model[i].Content" method="post">
+                    <input type="submit" value="remove" style="background:transparent; box-shadow:none; border: none;" id="delbtn" />
                 </form>
             </td>
         </tr>
-}
-
+    }
+    }
     </table>
-
-    <form action="Add" method="post">-
-        <label>Content</label><input type="text" name="content" value="" />
-        <lable>Priority</lable><input type="checkbox" name="priority" value="true" />
-        <input type="submit" name="name" value="Add ToDo" />
-    </form>
-
 </body>
 </html>
 
