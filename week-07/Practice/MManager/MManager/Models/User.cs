@@ -9,7 +9,7 @@ namespace MManager.Models
     {
         public string Name { get; set; }
         public string Pass { get; set; }
-        public string AccountID { get; set; }
+        public long AccountID { get; set; }
 
         public string Greet()
         {

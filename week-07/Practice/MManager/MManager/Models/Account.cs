@@ -7,7 +7,9 @@ namespace MManager.Models
 {
     public class Account
     {
-        string AccountBalance { get; set; }
-        List<Card> CardList;
+        public string Name { get; set; }
+        public string Pass { get; set; }
+        public double Balance { get; set; }
+        public long ID { get; set; }
     }
 }

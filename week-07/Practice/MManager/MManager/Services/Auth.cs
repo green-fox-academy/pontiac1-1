@@ -10,16 +10,16 @@ namespace MManager.Services
 {
     public class Auth : IAuth
     {
-        public User CurrentUser { get; set; }
+        public Account CurrentAccount { get; set; }
 
-        public string Register(string user, string pass, string repass)
+        public string Register(string user, string pass, string repass, double balance, double id)
         {
             if (pass == repass)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(User));
-                using (TextWriter tw = new StreamWriter(@"UserLog\" + user + ".xml"))
+                XmlSerializer serializer = new XmlSerializer(typeof(Account));
+                using (TextWriter tw = new StreamWriter(@"AccountLog\" + user + ".xml"))
                 {
-                    serializer.Serialize(tw, new User { Name = user, Pass = pass });
+                    serializer.Serialize(tw, new Account { Name = user, Pass = pass, Balance = balance});
                 }
 
                 return "SignIn";
@@ -32,39 +32,44 @@ namespace MManager.Services
 
         public string Authenticate(string user, string pass)
         {
-            //try
-            //{
-                XmlSerializer deserializer = new XmlSerializer(typeof(User));
-                TextReader tr = new StreamReader(@"UserLog\" + user + ".xml");
+            try
+            {
+                XmlSerializer deserializer = new XmlSerializer(typeof(Account));
+                TextReader tr = new StreamReader(@"AccountLog\" + user + ".xml");
                 object obj = deserializer.Deserialize(tr);
-                CurrentUser = (User)obj;
-            tr.Close();
-                if (CurrentUser.Pass == pass)
+                CurrentAccount = (Account)obj;
+                tr.Close();
+                if (CurrentAccount.Pass == pass)
                 {
-                    File.Delete(@"UserLog\" + user + ".xml");
+                    File.Delete(@"AccountLog\" + user + ".xml");
                     return "../Profile/Index";
                 }
                 else
                 {
                     return "SignIn";
                 }
-            //}
-            //catch (Exception)
-            //{
+            }
+            catch (Exception)
+            {
 
-            //    return "SignUp";
-            //}
+                return "SignUp";
+            }
         }
 
         public void LogOut()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(User));
-            using (TextWriter tw = new StreamWriter(@"UserLog\" + CurrentUser.Name + ".xml"))
+            XmlSerializer serializer = new XmlSerializer(typeof(Account));
+            using (TextWriter tw = new StreamWriter(@"AccountLog\" + CurrentAccount.Name + ".xml"))
             {
-                serializer.Serialize(tw, new User { Name = CurrentUser.Name, Pass = CurrentUser.Pass });
+                serializer.Serialize(tw, new Account { Name = CurrentAccount.Name, Pass = CurrentAccount.Pass, Balance = CurrentAccount.Balance, ID = CurrentAccount.ID });
             }
 
-            CurrentUser = null;
+            CurrentAccount = null;
+        }
+
+        public void ConnectAccount(long id)
+        {
+            CurrentAccount.ID = id;
         }
     }
 }

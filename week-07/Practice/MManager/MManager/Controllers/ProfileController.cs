@@ -26,8 +26,8 @@ namespace MManager.Controllers
             return View();
         }
 
-        [Route("openaccount")]
-        public IActionResult OpenAccount()
+        [Route("manageaccount")]
+        public IActionResult ManageAccount()
         {
             return View();
         }

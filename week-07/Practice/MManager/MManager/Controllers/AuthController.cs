@@ -37,10 +37,12 @@ namespace MManager.Controllers
         }
 
         [Route("Register")]
-        public IActionResult Register(string user, string pass, string repass)
+        public IActionResult Register(string user, string pass, string repass, double balance)
         {
-            authenticator.Register(user, pass, repass);
-            return RedirectToAction(authenticator.Register(user, pass, repass));
+            var rnd = new Random();
+            double id = rnd.Next(1000, 10000);
+            authenticator.Register(user, pass, repass, balance, id);
+            return RedirectToAction(authenticator.Register(user, pass, repass, balance, id));
         }
 
         [Route("Profile")]

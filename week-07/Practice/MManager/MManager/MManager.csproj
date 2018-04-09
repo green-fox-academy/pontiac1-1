@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="AccountLog\" />
     <Folder Include="UserLog\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
