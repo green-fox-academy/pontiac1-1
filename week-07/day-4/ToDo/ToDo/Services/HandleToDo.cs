@@ -19,7 +19,7 @@ namespace ToDo.Services
             }
         }
 
-        public void DelToDo(string content)
+        public void DelToDo(string content, int id = 0)
         {
             File.Delete(@"C:\Users\Test\Documents\fox\greenfox\pontiac1-1\week-07\day-4\ToDo\ToDo\SavedToDos\" + content + ".xml");
         }

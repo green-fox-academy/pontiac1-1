@@ -3,44 +3,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using ToDo.Models;
 using ToDo.Services;
+using ToDo.Migrations;
+using ToDo.Entities;
 
 namespace ToDo.Controllers
 {
     public class ToDoController : Controller
     {
+        private readonly ToDoContext _context;
         IToDo todoInter;
 
-        public ToDoController(IToDo todoInterface)
+        public ToDoController(IToDo todoInterface, ToDoContext context)
         {
             this.todoInter = todoInterface;
+            _context = context;
         }
 
-        [Route("List")]
-        public IActionResult List()
+        [Route("Test")]
+        public IActionResult Test()
         {
-            todoInter.ReadAll();
-            return View((object)ToDoList.myList);
+            return View(_context.ToDo.ToList());
         }
 
-        [Route("Add")]
-        public IActionResult List(string content, bool priority)
+        [Route("TestDel")]
+        public IActionResult TestDel(int id)
+        {
+            todoInter.DelToDo(null, id);
+            return Redirect("Test");
+        }
+
+        [Route("TestAdd")]
+        public IActionResult TestAdd(string content, bool priority)
         {
             todoInter.AddToDo(new ToDos { Content = content, Priority = priority });
-            ToDoList.myList.Clear();
-            todoInter.ReadAll();
-            return View((object)ToDoList.myList);
-            
+            return Redirect("Test");
         }
 
-        [Route("Del")]
-        public IActionResult List(string content)
+        [Route("Edit")]
+        public IActionResult Edit(int id)
         {
-            todoInter.DelToDo(content);
-            ToDoList.myList.Clear();
-            todoInter.ReadAll();
-            return View(ToDoList.myList);
+            ToDos toUpdate = _context.ToDo.FirstOrDefault(td => td.ID == id);
+            return View(toUpdate);
+        }
+
+        [Route("Save")]
+        public IActionResult Test(int id, string newContent, bool newPriority)
+        {
+            using (_context)
+            {
+                ToDos toUpdate = _context.ToDo.FirstOrDefault(td => td.ID == id);
+                toUpdate.Content = newContent;
+                toUpdate.Priority = newPriority;
+                _context.SaveChanges();
+            }
+
+            return Redirect("Test");
         }
     }
 }

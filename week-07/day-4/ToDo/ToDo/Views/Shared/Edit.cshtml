@@ -1,0 +1,15 @@
+﻿@model ToDos
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2>Edit todo</h2>
+    <form action="/Save?id=@Model.ID" method="post">
+        <input type="text" name="newContent" value="@Model.Content" />
+        <input type="checkbox" name="newPriority" value="true" />
+        <input type="submit" name="name" value="" />
+    </form>
+</body>
+</html>
+
