@@ -17,7 +17,16 @@ namespace Frontend.Services
             return intToDouble * 2;
         }
 
-        public int Factor(int intToFactor)
+        public int[] DoubleArr(int[] arrToDouble)
+        {
+            for (int i = 0; i < arrToDouble.Length; i++)
+            {
+                arrToDouble[i] *= 2;
+            }
+            return arrToDouble;
+        }
+
+        public int? Factor(int? intToFactor)
         {
             if (intToFactor == 1)
             {
@@ -25,7 +34,7 @@ namespace Frontend.Services
             }
             else
             {
-                return intToFactor * Factor(--intToFactor);
+                return intToFactor * Factor(intToFactor - 1);
             }
         }
 
@@ -34,7 +43,17 @@ namespace Frontend.Services
             return $"Hello {Name}";
         }
 
-        public int Sum(int intToSumUntil)
+        public int MultiplyArr(int[] arrToMultiply)
+        {
+            int total = 1;
+            foreach (var number in arrToMultiply)
+            {
+                total *= number;
+            }
+            return total;
+        }
+
+        public int? Sum(int? intToSumUntil)
         {
             if (intToSumUntil == 1)
             {
@@ -42,8 +61,18 @@ namespace Frontend.Services
             }
             else
             {
-                return intToSumUntil + Sum(--intToSumUntil);
+                return intToSumUntil + Sum(intToSumUntil - 1);
             }
+        }
+
+        public int SumArr(int[] arrToSum)
+        {
+            int sum = 0;
+            foreach (var item in arrToSum)
+            {
+                sum += item;
+            }
+            return sum;
         }
 
         public string ThrowError()

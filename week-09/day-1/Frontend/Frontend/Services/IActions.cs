@@ -11,7 +11,10 @@ namespace Frontend.Services
         string Greet(string Name);
         string ThrowError();
         string AppendA(string wordToAppendTo);
-        int Factor(int intToFactor);
-        int Sum(int intToSumUntil);
+        int? Factor(int? intToFactor);
+        int? Sum(int? intToSumUntil);
+        int[] DoubleArr(int[] arrToDouble);
+        int SumArr(int[] arrToSum);
+        int MultiplyArr(int[] arrToMultiply);
     }
 }

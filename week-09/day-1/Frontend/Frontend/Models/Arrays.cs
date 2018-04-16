@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Frontend.Models
 {
-    public class NumberDTO
+    public class Arrays
     {
-        public int? Until { get; set; }
-        public int? Result { get; set; }
+        public string What { get; set; }
+        public int[] Numbers { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Frontend.Services;
 using Frontend.Models;
+using System.Net.Mail;
 
 namespace Frontend.Controllers
 {
@@ -75,11 +76,39 @@ namespace Frontend.Controllers
         }
 
         [HttpPost]
-        [Route("/dountil/sum/{what}")]
-        public IActionResult Sum(int what)
+        [Route("/dountil/{what}")]
+        public IActionResult FactorOrSum(string what, [FromBody]NumberDTO until)
         {
-            NumberDTO num = new NumberDTO { In = what, Out = act.Sum(what) };
-            return Json(num);
+            if (what == "sum")
+            {
+                return Json(new { Result = act.Sum(until.Until) });
+            }
+            else if (what == "factor")
+            {
+                return Json(new { Result = act.Factor(until.Until) });
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost]
+        [Route("/arrays")]
+        public IActionResult Array([FromBody]Arrays array)
+        {
+            if (array.What == "sum")
+            {
+                return Json(act.SumArr(array.Numbers));
+            }
+            else if(array.What == "factor")
+            {
+                return Json(act.MultiplyArr(array.Numbers));
+            }
+            else
+            {
+                return Json(act.DoubleArr(array.Numbers));
+            }
         }
 
     }
