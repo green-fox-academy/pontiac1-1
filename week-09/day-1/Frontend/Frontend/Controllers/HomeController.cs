@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Frontend.Services;
 using Frontend.Models;
 using System.Net.Mail;
+using Frontend.Entities;
 
 namespace Frontend.Controllers
 {
@@ -14,10 +15,12 @@ namespace Frontend.Controllers
     {
 
         IActions act;
+        LogContext logger;
 
-        public HomeController(IActions act)
+        public HomeController(IActions act, LogContext logger)
         {
             this.act = act;
+            this.logger = logger;
         }
 
         [Route("")]
@@ -46,7 +49,9 @@ namespace Frontend.Controllers
         [Route("/greeter")]
         public IActionResult Greeting(string Name)
         {
-            
+            logger.LogList.Add(new LogDTO { createdAt = DateTime.Now, Endpoint = @"/greeter", Data = Name });
+            logger.SaveChanges();
+
             if (Name != null)
             {
                 GreeterDTO greet = new GreeterDTO { Message = act.Greet(Name) };
@@ -111,5 +116,23 @@ namespace Frontend.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("/log")]
+        public IActionResult ListLog(string q)
+        {
+            if (q == null)
+            {
+            Logger toReturn = new Logger { LogList = logger.LogList.ToList(), Entries = logger.LogList.ToList().Count() };
+            return Json(toReturn);
+
+            }
+            else
+            {
+                Logger toReturn = new Logger { LogList = logger.LogList.Where(l=>l.Data.Contains(q)).ToList(), Entries = logger.LogList.ToList().Count() };
+                return Json(toReturn);
+            }
+        }
+
+       
     }
 }

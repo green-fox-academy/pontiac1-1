@@ -6,11 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Frontend.Services;
-using Frontend.Entities;
+using groot.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Frontend
+namespace groot
 {
     public class Startup
     {
@@ -19,16 +18,14 @@ namespace Frontend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<IActions, Actions>();
-            services.AddDbContext<LogContext>(options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Log;Integrated Security=True;"));
+            services.AddDbContext<GrootContext>(options => options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;"));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseMvc();
-            app.UseStaticFiles();
-            app.UseDefaultFiles();
 
             if (env.IsDevelopment())
             {
