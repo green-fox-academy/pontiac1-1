@@ -1,0 +1,28 @@
+﻿@model List<ExamPractice.Models.Planet>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Space Transporter</title>
+</head>
+<body>
+    <h3>Space Transporter</h3>
+    <table border="1">
+        <tr>
+            <th>Planet</th>
+            <th>Population</th>
+            <th>Spaceship Location</th>
+            <th>Crew</th>
+        </tr>
+    @foreach (var planet in Model)
+    {
+        <tr>
+            <td>@planet.Name</td>
+            <td>@planet.Population</td>
+        </tr>        
+    }
+
+    </table>
+</body>
+</html>
+
+   
